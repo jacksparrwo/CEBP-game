@@ -11,8 +11,22 @@ public class Game extends Canvas implements Runnable{
 	private static final long serialVersionUID = -2493195693272574797L;
 	private Thread t1;
 	private boolean running = false;
+	private GameHandler gh;
 	public Game() {
 		new Window(640,480,"POKEMON POKEMON",this);
+		
+		gh = new GameHandler();
+		
+		gh.addObject(new Catcher(100,100,Entities.Catcher));// adding the catcher object type in the list
+		
+		gh.addObject(new Tree(300,250,Entities.Tree));
+		gh.addObject(new Tree(400,250,Entities.Tree));
+		gh.addObject(new Tree(500,250,Entities.Tree));
+		gh.addObject(new Tree(300,250,Entities.Tree));
+		gh.addObject(new Tree(400,350,Entities.Tree));
+		gh.addObject(new Tree(500,350,Entities.Tree));
+		gh.addObject(new Tree(300,350,Entities.Tree));
+		 
 	}
 	
 	
@@ -75,7 +89,7 @@ public class Game extends Canvas implements Runnable{
 	}
 	private void tick()
 	{
-		
+		gh.tick();
 	}
 	private void render()
 	{
@@ -88,6 +102,7 @@ public class Game extends Canvas implements Runnable{
 		Graphics g = bs.getDrawGraphics();
 		g.setColor(Color.pink);
 		g.fillRect(0,0,640,480);
+		gh.render(g);
 		g.dispose();
 		bs.show();
 	}
