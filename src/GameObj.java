@@ -12,4 +12,24 @@ public abstract class GameObj {
 	}
 	public abstract void tick();
 	public abstract void render(Graphics g);
+	 public void setX(int x) {
+		 this.x=x;
+	 }
+	 public void setY(int y) {
+		 this.y=y;
+	 }
+	 public int getX(int x) {
+		 return x;
+	 }
+	 public int getY(int y) {
+		 return y;
+	 }
+	 public void setEntity(Entities entity)
+	 {
+		 this.entity=entity;
+	 }
+	 public Entities getEntity()
+	 {
+		 return entity;
+	 }
 }
