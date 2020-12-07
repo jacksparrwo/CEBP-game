@@ -2,6 +2,7 @@ import java.awt.Canvas;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.image.BufferStrategy;
+import java.util.Random;
 
 public class Game extends Canvas implements Runnable{
 
@@ -12,13 +13,21 @@ public class Game extends Canvas implements Runnable{
 	private Thread t1;
 	private boolean running = false;
 	private GameHandler gh;
+	private Random r;
 	public Game() {
 		new Window(640,480,"POKEMON POKEMON",this);
 		
 		gh = new GameHandler();
+		r = new Random();
+		for(int i = 0; i < 3; i++){
+			gh.addObject(new Tree(r.nextInt(320),r.nextInt(240),Entities.Tree));
+			
+		}
 		
-		gh.addObject(new Catcher(100,100,Entities.Catcher));// adding the catcher object type in the list
+		gh.addObject(new Catcher(400,350,Entities.Catcher));// adding the catcher object type in the list
 		
+		/*
+		 
 		gh.addObject(new Tree(300,250,Entities.Tree));
 		gh.addObject(new Tree(400,250,Entities.Tree));
 		gh.addObject(new Tree(500,250,Entities.Tree));
@@ -26,6 +35,8 @@ public class Game extends Canvas implements Runnable{
 		gh.addObject(new Tree(400,350,Entities.Tree));
 		gh.addObject(new Tree(500,350,Entities.Tree));
 		gh.addObject(new Tree(300,350,Entities.Tree));
+		
+		*/
 		 
 	}
 	

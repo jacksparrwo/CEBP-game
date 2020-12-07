@@ -11,7 +11,8 @@ public class Catcher extends GameObj{
 
 	@Override
 	public void tick() {
-		
+		x+=velOnX;
+		y+=velOnY;
 		
 	}
 
