@@ -1,4 +1,6 @@
 import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.io.IOException;
 
 public abstract class GameObj {
 
@@ -11,7 +13,7 @@ public abstract class GameObj {
 		this.entity=entity;
 	}
 	public abstract void tick();
-	public abstract void render(Graphics g);
+	public abstract void render(Graphics2D g) throws IOException;
 	 public void setX(int x) {
 		 this.x=x;
 	 }

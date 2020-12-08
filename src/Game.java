@@ -1,7 +1,9 @@
 import java.awt.Canvas;
 import java.awt.Color;
 import java.awt.Graphics;
+import java.awt.Graphics2D;
 import java.awt.image.BufferStrategy;
+import java.io.IOException;
 import java.util.Random;
 
 public class Game extends Canvas implements Runnable{
@@ -26,14 +28,15 @@ public class Game extends Canvas implements Runnable{
 		
 		r = new Random();
 		
-		for(int i = 0; i < 20; i++){
+		for(int i = 0; i < 50; i++){
 			
-			gh.addObject(new Tree(r.nextInt(1000),r.nextInt(400),Entities.Tree));
+			gh.addObject(new Coin(r.nextInt(1920),r.nextInt(800),Entities.Coin));
 			
 		}
 		
-		gh.addObject(new Catcher(700,600,Entities.Catcher));// adding the catcher object type in the list
-		gh.addObject(new Catcher(800,600,Entities.Catcher2));
+		gh.addObject(new Catcher(700,900,Entities.Catcher));// adding the catcher object type in the list
+		gh.addObject(new Catcher(800,900,Entities.Catcher2));
+		
 	
 		 
 	}
@@ -78,8 +81,13 @@ public class Game extends Canvas implements Runnable{
 						delta--;
 					}
 					
-			if(running) 
-				render();
+			if(running)
+				try {
+					render();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			frames++;
 			
 			if(System.currentTimeMillis()- timer > 1000) 
@@ -100,7 +108,7 @@ public class Game extends Canvas implements Runnable{
 	{
 		gh.tick();
 	}
-	private void render()
+	private void render() throws IOException
 	{
 		BufferStrategy bs = this.getBufferStrategy();
 		if(bs== null)
@@ -108,7 +116,7 @@ public class Game extends Canvas implements Runnable{
 			this.createBufferStrategy(3);
 			return;
 		}
-		Graphics g = bs.getDrawGraphics();
+		Graphics2D g = (Graphics2D) bs.getDrawGraphics();
 		g.setColor(Color.LIGHT_GRAY);
 		g.fillRect(0,0,1920,1000);
 		gh.render(g);

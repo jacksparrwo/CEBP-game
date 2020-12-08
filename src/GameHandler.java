@@ -1,4 +1,6 @@
 import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.io.IOException;
 import java.util.LinkedList;
 
 public class GameHandler {
@@ -14,7 +16,7 @@ public class GameHandler {
 	}
 
 	
-	public void render(Graphics g) {  
+	public void render(Graphics2D g) throws IOException {  
 		for(int i = 0;i < gameObjects.size(); i++){   // in order to loop through all objects in the game 
 			GameObj gj = gameObjects.get(i);          // and render them.      *same above
 			gj.render(g);
