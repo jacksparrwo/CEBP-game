@@ -15,17 +15,23 @@ public class Game extends Canvas implements Runnable{
 	private GameHandler gh;
 	private Random r;
 	public Game() {
-		new Window(640,480,"POKEMON POKEMON",this);
 		
 		gh = new GameHandler();
+		
+		this.addKeyListener(new KeyInEvent(gh));
+		
+		new Window(1920,1000,"POKEMON POKEMON",this);
+		
 		r = new Random();
-		for(int i = 0; i < 3; i++){
-			gh.addObject(new Tree(r.nextInt(320),r.nextInt(240),Entities.Tree));
+		
+		for(int i = 0; i < 20; i++){
+			
+			gh.addObject(new Tree(r.nextInt(1000),r.nextInt(400),Entities.Tree));
 			
 		}
 		
-		gh.addObject(new Catcher(400,350,Entities.Catcher));// adding the catcher object type in the list
-		
+		gh.addObject(new Catcher(700,600,Entities.Catcher));// adding the catcher object type in the list
+		gh.addObject(new Catcher(800,600,Entities.Catcher2));
 		/*
 		 
 		gh.addObject(new Tree(300,250,Entities.Tree));
@@ -87,7 +93,7 @@ public class Game extends Canvas implements Runnable{
 			if(System.currentTimeMillis()- timer > 1000) 
 			{
 				timer += 1000;
-				System.out.println("FPS: "+frames);
+				//System.out.println("FPS: "+frames);
 				frames=0;
 			}
 				
@@ -111,8 +117,8 @@ public class Game extends Canvas implements Runnable{
 			return;
 		}
 		Graphics g = bs.getDrawGraphics();
-		g.setColor(Color.pink);
-		g.fillRect(0,0,640,480);
+		g.setColor(Color.LIGHT_GRAY);
+		g.fillRect(0,0,1920,1000);
 		gh.render(g);
 		g.dispose();
 		bs.show();

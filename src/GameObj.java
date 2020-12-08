@@ -18,10 +18,10 @@ public abstract class GameObj {
 	 public void setY(int y) {
 		 this.y=y;
 	 }
-	 public int getX(int x) {
+	 public int getX() {
 		 return x;
 	 }
-	 public int getY(int y) {
+	 public int getY() {
 		 return y;
 	 }
 	 public void setEntity(Entities entity)
@@ -38,10 +38,10 @@ public abstract class GameObj {
 	 public void setVelY(int velOnY) {
 		 this.velOnY=velOnY;
 	 }
-	 public int getVelX(int x) {
+	 public int getVelX() {
 		 return velOnX;
 	 }
-	 public int getVelY(int y) {
+	 public int getVelY() {
 		 return velOnY;
 	 }
 }

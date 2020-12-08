@@ -18,6 +18,12 @@ public class Tree extends GameObj{
 	public void render(Graphics g) {
 		g.setColor(Color.green);
 		g.fillRect(x , y , 24 , 24);
+		g.setColor(Color.LIGHT_GRAY);
+		g.fillRect(x , y+14 , 8 , 10);
+		g.setColor(Color.LIGHT_GRAY);
+		g.fillRect(x+16 , y+14 , 8 , 10 );
+		g.setColor(Color.DARK_GRAY);
+		g.fillRect(x+8 , y+15 , 8 , 10 );
 		
 	}
 	
