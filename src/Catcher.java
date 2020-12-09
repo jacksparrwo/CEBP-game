@@ -7,6 +7,8 @@ public class Catcher extends GameObj{
 	GameHandler gh;
 	public static int goldWhite ;
 	public static int goldBlack ;
+	//public static int once1;
+	//public static int once2 ;
 	public Catcher(int x, int y, Entities entity,GameHandler gh) {
 		super(x, y, entity);
 		this.gh=gh;
@@ -39,24 +41,24 @@ public class Catcher extends GameObj{
 					
 					if(entity == Entities.Catcher)
 					{
-						if(goldWhite<1)
+						if(goldWhite<25)
 						{
 						goldWhite++;
 						gh.removeObject(obj);
 						}else
 						{
-							System.out.println("WHITE: the gold limit is reached!!!");
-						}
-					}
-					if(entity == Entities.Catcher2)
-					{
-						if(goldBlack<1)
+							System.out.println("WHITE: the gold limit is reached!!!");              //GOLD LIMITS
+						}																		//GOLD LIMITS
+					}																			    	//GOLD LIMITS
+					if(entity == Entities.Catcher2)											        //GOLD LIMITS
+					{	
+						if(goldBlack<25)														//GOLD LIMITS
 						{
-						goldBlack++;
-						gh.removeObject(obj);
-						}else
-						{
-							System.out.println("BLACK: the gold limit is reached!!!");
+						goldBlack++; 																//GOLD LIMITS
+						gh.removeObject(obj);													//GOLD LIMITS
+						}else																	//GOLD LIMITS
+						{																			//GOLD LIMITS
+							System.out.println("BLACK: the gold limit is reached!!!");					//GOLD LIMITS
 						}
 					}
 					
@@ -64,6 +66,33 @@ public class Catcher extends GameObj{
 				}
 				
 			}
+			
+			if(obj.getEntity()== Entities.ShopKeeper)
+			{
+				if(getBounds().intersects(obj.getBounds()))
+				{
+					
+					if(entity == Entities.Catcher)
+					{
+						//if(once1==0)
+						//{
+						//new ShopWindow();
+						//once2++;
+						//}
+					}
+					if(entity == Entities.Catcher2)											        //GOLD LIMITS
+					{	
+						//if(once2==0)
+						//{
+						//new ShopWindow();
+						//once2++;
+						//}
+					}
+				}
+			}
+			
+			
+			
 			
 		}
 	}

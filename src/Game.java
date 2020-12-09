@@ -37,7 +37,7 @@ public class Game extends Canvas implements Runnable{
 		
 		gh.addObject(new Catcher(700,900,Entities.Catcher,gh));// adding the catcher object type in the list
 		gh.addObject(new Catcher(800,900,Entities.Catcher2,gh));
-		
+		gh.addObject(new ShopKeeper(300,900,Entities.ShopKeeper));
 		
 		 
 	}
