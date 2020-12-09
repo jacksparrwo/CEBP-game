@@ -39,13 +39,25 @@ public class Catcher extends GameObj{
 					
 					if(entity == Entities.Catcher)
 					{
+						if(goldWhite<1)
+						{
 						goldWhite++;
 						gh.removeObject(obj);
+						}else
+						{
+							System.out.println("WHITE: the gold limit is reached!!!");
+						}
 					}
 					if(entity == Entities.Catcher2)
 					{
+						if(goldBlack<1)
+						{
 						goldBlack++;
 						gh.removeObject(obj);
+						}else
+						{
+							System.out.println("BLACK: the gold limit is reached!!!");
+						}
 					}
 					
 					
