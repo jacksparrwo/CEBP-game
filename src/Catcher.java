@@ -1,19 +1,59 @@
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
+import java.awt.Rectangle;
 
 public class Catcher extends GameObj{
-
-	public Catcher(int x, int y, Entities entity) {
+	GameHandler gh;
+	public static int goldWhite ;
+	public static int goldBlack ;
+	public Catcher(int x, int y, Entities entity,GameHandler gh) {
 		super(x, y, entity);
-	
+		this.gh=gh;
+	}
+	public Rectangle getBounds() {
+		return new Rectangle(x,y,32,32);
+		
 	}
 
 	@Override
 	public void tick() {
 		x+=velOnX;
 		y+=velOnY;
+		collision();
 		
+	}
+	private void collision()
+	{
+		
+		
+		for(int i=0; i < gh.gameObjects.size(); i++) {
+			GameObj obj = gh.gameObjects.get(i);
+			
+			 
+			if(obj.getEntity()== Entities.Coin)
+			{
+				if(getBounds().intersects(obj.getBounds()))
+				{
+					//gold++;
+					
+					if(entity == Entities.Catcher)
+					{
+						goldWhite++;
+						gh.removeObject(obj);
+					}
+					if(entity == Entities.Catcher2)
+					{
+						goldBlack++;
+						gh.removeObject(obj);
+					}
+					
+					
+				}
+				
+			}
+			
+		}
 	}
 
 	@Override

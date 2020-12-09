@@ -1,6 +1,7 @@
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
+import java.awt.Rectangle;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -8,9 +9,12 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 
 public class Coin extends GameObj{
+	
 
+	
 	public Coin(int x, int y, Entities entity) {
 		super(x, y, entity);
+		
 		
 	}
 
@@ -19,6 +23,11 @@ public class Coin extends GameObj{
 		// TODO Auto-generated method stub
 		
 	}
+	public Rectangle getBounds() {
+		return new Rectangle(x,y,22,22);
+		
+	}
+	
 
 	@Override
 	public void render(Graphics2D g) throws IOException {

@@ -17,6 +17,7 @@ public class Game extends Canvas implements Runnable{
 	private GameHandler gh;
 	private Random r;
 	public int frames;
+	
 	Window wind;
 	public Game() {
 		
@@ -34,10 +35,10 @@ public class Game extends Canvas implements Runnable{
 			
 		}
 		
-		gh.addObject(new Catcher(700,900,Entities.Catcher));// adding the catcher object type in the list
-		gh.addObject(new Catcher(800,900,Entities.Catcher2));
+		gh.addObject(new Catcher(700,900,Entities.Catcher,gh));// adding the catcher object type in the list
+		gh.addObject(new Catcher(800,900,Entities.Catcher2,gh));
 		
-	
+		
 		 
 	}
 	
@@ -97,7 +98,8 @@ public class Game extends Canvas implements Runnable{
 				frames=0;
 			}
 				
-			
+			wind.textField_2.setText(String.valueOf(Catcher.goldWhite));
+			wind.textField_5.setText(String.valueOf(Catcher.goldBlack));
 					
 			
 		}
@@ -127,9 +129,11 @@ public class Game extends Canvas implements Runnable{
 	{
 		return frames;
 	}
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		new Game();
 	}
+	
 
 }

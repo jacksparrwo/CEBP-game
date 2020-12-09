@@ -1,5 +1,6 @@
 import java.awt.Graphics;
 import java.awt.Graphics2D;
+import java.awt.Rectangle;
 import java.io.IOException;
 
 public abstract class GameObj {
@@ -14,6 +15,7 @@ public abstract class GameObj {
 	}
 	public abstract void tick();
 	public abstract void render(Graphics2D g) throws IOException;
+	public abstract Rectangle getBounds();
 	 public void setX(int x) {
 		 this.x=x;
 	 }
@@ -46,4 +48,5 @@ public abstract class GameObj {
 	 public int getVelY() {
 		 return velOnY;
 	 }
+	
 }
