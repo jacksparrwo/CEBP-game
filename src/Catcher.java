@@ -7,8 +7,8 @@ public class Catcher extends GameObj{
 	GameHandler gh;
 	public static int goldWhite ;
 	public static int goldBlack ;
-	//public static int once1;
-	//public static int once2 ;
+	public boolean colShopKeeperWhite=false;
+	public boolean colShopKeeperBlack=false;
 	public Catcher(int x, int y, Entities entity,GameHandler gh) {
 		super(x, y, entity);
 		this.gh=gh;
@@ -74,21 +74,25 @@ public class Catcher extends GameObj{
 					
 					if(entity == Entities.Catcher)
 					{
-						//if(once1==0)
-						//{
-						//new ShopWindow();
-						//once2++;
-						//}
+						if(colShopKeeperWhite==false)
+						{
+						new ShopWindow();
+						colShopKeeperWhite=true;
+						} 
 					}
+					
+					
+					
 					if(entity == Entities.Catcher2)											        //GOLD LIMITS
 					{	
-						//if(once2==0)
-						//{
-						//new ShopWindow();
-						//once2++;
-						//}
+						if(colShopKeeperBlack==false)
+						{
+						new ShopWindow();
+						colShopKeeperBlack=true;
+						} 
 					}
 				}
+				
 			}
 			
 			
