@@ -86,5 +86,5 @@ public class ShopWindow extends JFrame{
 	    //desktopPane.add(buttonBuy);
 	    frame.setVisible(true);
 	}
-	
+	//test
 }

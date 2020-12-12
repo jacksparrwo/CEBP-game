@@ -46,7 +46,7 @@ public class ShopKeeper extends GameObj{
 	
 		
 		
-	}
+	}//test
 	
 	
 }

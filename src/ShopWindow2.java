@@ -65,7 +65,7 @@ public class ShopWindow2 extends JFrame{
 				
 				}
 			
-			
+			//test
 	    	
 	    });
 	}
