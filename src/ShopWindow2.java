@@ -1,9 +1,6 @@
+
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
-import java.awt.GraphicsConfiguration;
-import java.awt.Insets;
-import java.awt.Rectangle;
-import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -13,36 +10,30 @@ import javax.swing.JButton;
 import javax.swing.JDesktopPane;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.Icon;
-import java.awt.Button;
 import javax.swing.SwingConstants;
 
 
 
-
-
-
-public class ShopWindow extends JFrame{
+public class ShopWindow2 extends JFrame{
 
 	
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = -7724070370845968374L;
+
+	private static final long serialVersionUID = -1363970201577058982L;
+	
+	
 	private JButton buttonBuy;
 	GameHandler gh;
 	Entities ent;
 	private ImageIcon img = new ImageIcon("pokeball.png");
-	public ShopWindow () {
+	public ShopWindow2 () {
 		
-		JFrame frame= new JFrame("THIS IS SHOP FOR WHITE");
-		frame.getContentPane().setLayout(new FlowLayout());
-		frame.setBounds(0, 0, 400, 150);
+		JFrame frame= new JFrame("THIS IS SHOP FOR BLACK");
+		frame.setLayout(new FlowLayout());
+		frame.setBounds(100, 100, 400, 150);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setResizable(false);
-		
-	    frame.setLocation(0, 0);
-		
+		frame.setLocationRelativeTo(null);
+		frame.setLocation(0, 300);
 		
 		JDesktopPane desktopPane = new JDesktopPane();
 		getContentPane().add(desktopPane, BorderLayout.CENTER);
@@ -53,28 +44,23 @@ public class ShopWindow extends JFrame{
 		label.setIcon(img);
 		
 		frame.getContentPane().add(label);
-
 		buttonBuy = new JButton("BUY POKEBALL");
-		buttonBuy.setBounds(153, 11, 126, 42);
-		
-		frame.getContentPane().add(buttonBuy);
-
+		frame.add(buttonBuy);
 	    
-	    
+	    frame.setVisible(true);
 	    buttonBuy.addActionListener(new ActionListener(){ 
 	    	
 			@Override
 			public void actionPerformed(ActionEvent e) {
 					
 						
-						if(Catcher.goldWhite>0)
+					
+					
+						if(Catcher.goldBlack>0)
 						{
-							Catcher.goldWhite--;
-							Catcher.ballsWhite++;
+							Catcher.goldBlack--;
+							Catcher.ballsBlack++;
 						}
-						
-					
-					
 					
 				
 				}
@@ -82,9 +68,5 @@ public class ShopWindow extends JFrame{
 			
 	    	
 	    });
-	    //desktopPane.add(label);
-	    //desktopPane.add(buttonBuy);
-	    frame.setVisible(true);
 	}
-	
 }

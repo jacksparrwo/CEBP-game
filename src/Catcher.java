@@ -7,6 +7,8 @@ public class Catcher extends GameObj{
 	GameHandler gh;
 	public static int goldWhite ;
 	public static int goldBlack ;
+	public static int ballsWhite ;
+	public static int ballsBlack ;
 	public boolean colShopKeeperWhite=false;
 	public boolean colShopKeeperBlack=false;
 	public Catcher(int x, int y, Entities entity,GameHandler gh) {
@@ -37,7 +39,6 @@ public class Catcher extends GameObj{
 			{
 				if(getBounds().intersects(obj.getBounds()))
 				{
-					//gold++;
 					
 					if(entity == Entities.Catcher)
 					{
@@ -77,6 +78,7 @@ public class Catcher extends GameObj{
 						if(colShopKeeperWhite==false)
 						{
 						new ShopWindow();
+						
 						colShopKeeperWhite=true;
 						} 
 					}
@@ -87,7 +89,8 @@ public class Catcher extends GameObj{
 					{	
 						if(colShopKeeperBlack==false)
 						{
-						new ShopWindow();
+						new ShopWindow2();
+						
 						colShopKeeperBlack=true;
 						} 
 					}

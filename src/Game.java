@@ -100,6 +100,8 @@ public class Game extends Canvas implements Runnable{
 				
 			wind.textField_2.setText(String.valueOf(Catcher.goldWhite));
 			wind.textField_5.setText(String.valueOf(Catcher.goldBlack));
+			wind.textField_4.setText(String.valueOf(Catcher.ballsWhite));
+			wind.textField_8.setText(String.valueOf(Catcher.ballsBlack));
 					
 			
 		}
@@ -125,10 +127,7 @@ public class Game extends Canvas implements Runnable{
 		g.dispose();
 		bs.show();
 	}
-	public int getFrames()
-	{
-		return frames;
-	}
+	
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

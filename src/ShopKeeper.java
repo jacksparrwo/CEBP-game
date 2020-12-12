@@ -11,7 +11,9 @@ import javax.imageio.ImageIO;
 public class ShopKeeper extends GameObj{
 	
 
-	
+	GameHandler gh;
+	private boolean wspeed =false;
+	private boolean bspeed =false;
 	public ShopKeeper(int x, int y, Entities entity) {
 		super(x, y, entity);
 		
@@ -28,7 +30,6 @@ public class ShopKeeper extends GameObj{
 		
 	}
 	
-
 	@Override
 	public void render(Graphics2D g) throws IOException {
 
