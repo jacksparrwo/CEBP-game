@@ -82,9 +82,7 @@ public class Window extends Canvas{
 		textField_2.setColumns(10);
 		textField_2.setEditable(false);
 		
-		
-		
-		
+
 		
 		txtPokeballs = new JTextField();
 		txtPokeballs.setFont(new Font("Tahoma", Font.BOLD, 11));

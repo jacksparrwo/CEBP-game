@@ -67,11 +67,19 @@ public class ShopWindow extends JFrame{
 			public void actionPerformed(ActionEvent e) {
 					
 						
-						if(Catcher.goldWhite>0)
-						{
-							Catcher.goldWhite--;
-							Catcher.ballsWhite++;
-						}
+				if(Catcher.goldWhite>0 && Catcher.ballsWhite<10)
+				{
+					
+					Catcher.goldWhite--;
+					Catcher.ballsWhite++;
+				}
+				else
+				{
+					System.out.println("WHITE: Not enough space in bag for pokeballs");
+					
+				}
+						
+						
 						
 					
 					

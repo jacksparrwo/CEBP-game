@@ -4,5 +4,5 @@ public enum Entities {
 	Catcher2(),
 	ShopKeeper(),
 	Coin(),
-	Pokemon();
+	Dungeon();
 }

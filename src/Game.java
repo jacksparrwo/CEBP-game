@@ -38,6 +38,7 @@ public class Game extends Canvas implements Runnable{
 		gh.addObject(new Catcher(700,900,Entities.Catcher,gh));// adding the catcher object type in the list
 		gh.addObject(new Catcher(800,900,Entities.Catcher2,gh));
 		gh.addObject(new ShopKeeper(300,900,Entities.ShopKeeper));
+		gh.addObject(new Dungeon(1600,800,Entities.Dungeon));
 		
 		 
 	}
@@ -102,7 +103,10 @@ public class Game extends Canvas implements Runnable{
 			wind.textField_5.setText(String.valueOf(Catcher.goldBlack));
 			wind.textField_4.setText(String.valueOf(Catcher.ballsWhite));
 			wind.textField_8.setText(String.valueOf(Catcher.ballsBlack));
-					
+			wind.textField_3.setText(String.valueOf(Catcher.pokemonsWhite));
+			wind.textField_6.setText(String.valueOf(Catcher.pokemonsBlack));
+			
+			
 			
 		}
 		stopGame();

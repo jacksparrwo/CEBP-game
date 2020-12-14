@@ -11,6 +11,13 @@ public class Catcher extends GameObj{
 	public static int ballsBlack ;
 	public boolean colShopKeeperWhite=false;
 	public boolean colShopKeeperBlack=false;
+	public boolean dBlack=false;
+	public boolean dWhite=false;
+	
+	
+	public static int pokemonsWhite ;
+	public static int pokemonsBlack ;
+	
 	public Catcher(int x, int y, Entities entity,GameHandler gh) {
 		super(x, y, entity);
 		this.gh=gh;
@@ -48,18 +55,18 @@ public class Catcher extends GameObj{
 						gh.removeObject(obj);
 						}else
 						{
-							System.out.println("WHITE: the gold limit is reached!!!");              //GOLD LIMITS
-						}																		//GOLD LIMITS
-					}																			    	//GOLD LIMITS
-					if(entity == Entities.Catcher2)											        //GOLD LIMITS
+							System.out.println("WHITE: the gold limit is reached!!!");              
+						}																		
+					}																			    	
+					if(entity == Entities.Catcher2)											        
 					{	
-						if(goldBlack<25)														//GOLD LIMITS
+						if(goldBlack<25)														
 						{
-						goldBlack++; 																//GOLD LIMITS
-						gh.removeObject(obj);													//GOLD LIMITS
-						}else																	//GOLD LIMITS
-						{																			//GOLD LIMITS
-							System.out.println("BLACK: the gold limit is reached!!!");					//GOLD LIMITS
+						goldBlack++; 																
+						gh.removeObject(obj);													
+						}else																	
+						{																			
+							System.out.println("BLACK: the gold limit is reached!!!");					
 						}
 					}
 					
@@ -92,6 +99,36 @@ public class Catcher extends GameObj{
 						new ShopWindow2();
 						
 						colShopKeeperBlack=true;
+						} 
+					}
+				}
+				
+			}
+			
+			if(obj.getEntity()== Entities.Dungeon)
+			{
+				if(getBounds().intersects(obj.getBounds()))
+				{
+					
+					if(entity == Entities.Catcher)
+					{
+						if(dWhite==false)
+						{
+						new WDungeonWindow();
+						
+						dWhite=true;
+						} 
+					}
+					
+					
+					
+					if(entity == Entities.Catcher2)											        //GOLD LIMITS
+					{	
+						if(dBlack==false)
+						{
+						new BDungeonWindow();
+						
+						dBlack=true;
 						} 
 					}
 				}
