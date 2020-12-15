@@ -4,8 +4,9 @@
 	import java.awt.event.ActionEvent;
 	import java.awt.event.ActionListener;
 	import java.util.ArrayList;
+import java.util.Random;
 
-	import javax.swing.GroupLayout;
+import javax.swing.GroupLayout;
 	import javax.swing.ImageIcon;
 	import javax.swing.GroupLayout.Alignment;
 	import javax.swing.JButton;
@@ -34,7 +35,10 @@
 		private ImageIcon img11 = new ImageIcon("11.png");
 		private ImageIcon img12 = new ImageIcon("12.png");
 		
-		
+		Random r;
+		int low = 10;
+		int high = 100;
+		int result ;
 		
 
 		
@@ -61,11 +65,17 @@
 			    	
 					@Override
 					public void actionPerformed(ActionEvent e) {
+						
+						r=new Random();
+						result = r.nextInt(high-low) + low;
 						if(Catcher.ballsBlack>0)
 						{
 							
 							Catcher.ballsBlack--;
+							if(result>70)
+							{
 							Catcher.pokemonsBlack++;
+							}
 						}		
 						
 					}
@@ -84,12 +94,17 @@
 					@Override
 					public void actionPerformed(ActionEvent e) {
 						
+						r=new Random();
+						result = r.nextInt(high-low) + low;
 						if(Catcher.ballsBlack>0)
 						{
 							
 							Catcher.ballsBlack--;
+							if(result>70)
+							{
 							Catcher.pokemonsBlack++;
-						}
+							}
+						}		
 						
 			
 					}
@@ -107,12 +122,17 @@
 				
 				@Override
 				public void actionPerformed(ActionEvent e) {
+					r=new Random();
+					result = r.nextInt(high-low) + low;
 					if(Catcher.ballsBlack>0)
 					{
 						
 						Catcher.ballsBlack--;
+						if(result>70)
+						{
 						Catcher.pokemonsBlack++;
-					}			
+						}
+					}				
 					
 				}
 				
@@ -129,12 +149,17 @@
 				
 				@Override
 				public void actionPerformed(ActionEvent e) {
+					r=new Random();
+					result = r.nextInt(high-low) + low;
 					if(Catcher.ballsBlack>0)
 					{
 						
 						Catcher.ballsBlack--;
+						if(result>70)
+						{
 						Catcher.pokemonsBlack++;
-					}			
+						}
+					}				
 					
 				}
 				
@@ -151,12 +176,17 @@
 				
 				@Override
 				public void actionPerformed(ActionEvent e) {
+					r=new Random();
+					result = r.nextInt(high-low) + low;
 					if(Catcher.ballsBlack>0)
 					{
 						
 						Catcher.ballsBlack--;
+						if(result>70)
+						{
 						Catcher.pokemonsBlack++;
-					}			
+						}
+					}				
 					
 				}
 				
@@ -171,13 +201,17 @@
 				
 				@Override
 				public void actionPerformed(ActionEvent e) {
+					r=new Random();
+					result = r.nextInt(high-low) + low;
 					if(Catcher.ballsBlack>0)
 					{
 						
 						Catcher.ballsBlack--;
+						if(result>70)
+						{
 						Catcher.pokemonsBlack++;
-					}			
-					
+						}
+					}		
 				}
 				
 		    	
@@ -191,12 +225,17 @@
 				
 				@Override
 				public void actionPerformed(ActionEvent e) {
+					r=new Random();
+					result = r.nextInt(high-low) + low;
 					if(Catcher.ballsBlack>0)
 					{
 						
 						Catcher.ballsBlack--;
+						if(result>70)
+						{
 						Catcher.pokemonsBlack++;
-					}			
+						}
+					}				
 					
 				}
 				
@@ -211,12 +250,17 @@
 				
 				@Override
 				public void actionPerformed(ActionEvent e) {
+					r=new Random();
+					result = r.nextInt(high-low) + low;
 					if(Catcher.ballsBlack>0)
 					{
 						
 						Catcher.ballsBlack--;
+						if(result>70)
+						{
 						Catcher.pokemonsBlack++;
-					}			
+						}
+					}				
 					
 				}
 				
@@ -231,12 +275,17 @@
 				
 				@Override
 				public void actionPerformed(ActionEvent e) {
+					r=new Random();
+					result = r.nextInt(high-low) + low;
 					if(Catcher.ballsBlack>0)
 					{
 						
 						Catcher.ballsBlack--;
+						if(result>70)
+						{
 						Catcher.pokemonsBlack++;
-					}			
+						}
+					}				
 					
 				}
 				
@@ -251,11 +300,16 @@
 				
 				@Override
 				public void actionPerformed(ActionEvent e) {
+					r=new Random();
+					result = r.nextInt(high-low) + low;
 					if(Catcher.ballsBlack>0)
 					{
 						
 						Catcher.ballsBlack--;
+						if(result>70)
+						{
 						Catcher.pokemonsBlack++;
+						}
 					}			
 					
 				}
@@ -271,12 +325,17 @@
 				
 				@Override
 				public void actionPerformed(ActionEvent e) {
+					r=new Random();
+					result = r.nextInt(high-low) + low;
 					if(Catcher.ballsBlack>0)
 					{
 						
 						Catcher.ballsBlack--;
+						if(result>70)
+						{
 						Catcher.pokemonsBlack++;
-					}			
+						}
+					}				
 					
 				}
 				
@@ -291,12 +350,17 @@
 				
 				@Override
 				public void actionPerformed(ActionEvent e) {
+					r=new Random();
+					result = r.nextInt(high-low) + low;
 					if(Catcher.ballsBlack>0)
 					{
 						
 						Catcher.ballsBlack--;
+						if(result>70)
+						{
 						Catcher.pokemonsBlack++;
-					}			
+						}
+					}				
 					
 				}
 				

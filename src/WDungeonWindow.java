@@ -6,10 +6,11 @@
 	import java.awt.event.ActionEvent;
 	import java.awt.event.ActionListener;
 	import java.util.ArrayList;
+	import java.util.Random;
 
 	import javax.swing.GroupLayout;
-import javax.swing.ImageIcon;
-import javax.swing.GroupLayout.Alignment;
+	import javax.swing.ImageIcon;
+	import javax.swing.GroupLayout.Alignment;
 	import javax.swing.JButton;
 	import javax.swing.JDesktopPane;
 	import javax.swing.JFrame;
@@ -35,7 +36,10 @@ import javax.swing.GroupLayout.Alignment;
 		private ImageIcon img10 = new ImageIcon("10.png");
 		private ImageIcon img11 = new ImageIcon("11.png");
 		private ImageIcon img12 = new ImageIcon("12.png");
-		
+		Random r;
+		int low = 10;
+		int high = 100;
+		int result ;
 		
 		
 
@@ -56,18 +60,24 @@ import javax.swing.GroupLayout.Alignment;
 		
 			
 			JButton b1 = new JButton("CHARMANDER");
-			b1.setBounds(158, 45, 103, 23);
+			b1.setBounds(158, 45, 119, 23);
 			b1.setBackground(Color.RED);
 			desktopPane.add(b1);
 			b1.addActionListener(new ActionListener(){ 
 			    	
 					@Override
 					public void actionPerformed(ActionEvent e) {
-						if(Catcher.ballsWhite>0)
+						r=new Random();
+						result = r.nextInt(high-low) + low;
+						
+						if(Catcher.ballsWhite>0 )
 						{
 							
 							Catcher.ballsWhite--;
+							if(result>70)
+							{
 							Catcher.pokemonsWhite++;
+							}
 						}
 						
 					}
@@ -78,7 +88,7 @@ import javax.swing.GroupLayout.Alignment;
 			
 			
 			JButton b2 = new JButton("EEVEE");
-			b2.setBounds(158, 116, 103, 23);
+			b2.setBounds(158, 116, 119, 23);
 			b2.setBackground(new Color(139, 69, 19));
 			desktopPane.add(b2);
 			b2.addActionListener(new ActionListener(){ 
@@ -86,11 +96,17 @@ import javax.swing.GroupLayout.Alignment;
 					@Override
 					public void actionPerformed(ActionEvent e) {
 						
-						if(Catcher.ballsWhite>0)
+						r=new Random();
+						result = r.nextInt(high-low) + low;
+						
+						if(Catcher.ballsWhite>0 )
 						{
 							
 							Catcher.ballsWhite--;
+							if(result>70)
+							{
 							Catcher.pokemonsWhite++;
+							}
 						}
 						
 			
@@ -102,19 +118,25 @@ import javax.swing.GroupLayout.Alignment;
 			 
 			
 			JButton b3 = new JButton("MEW");
-			b3.setBounds(158, 198, 103, 23);
+			b3.setBounds(158, 198, 119, 23);
 			b3.setBackground(new Color(255, 105, 180));
 			desktopPane.add(b3);
 			b3.addActionListener(new ActionListener(){ 
 				
 				@Override
 				public void actionPerformed(ActionEvent e) {
-					if(Catcher.ballsWhite>0)
+					r=new Random();
+					result = r.nextInt(high-low) + low;
+					
+					if(Catcher.ballsWhite>0 )
 					{
 						
 						Catcher.ballsWhite--;
+						if(result>70)
+						{
 						Catcher.pokemonsWhite++;
-					}			
+						}
+					}		
 					
 				}
 				
@@ -125,18 +147,24 @@ import javax.swing.GroupLayout.Alignment;
 			
 			JButton b4 = new JButton("PIKACHU");
 			b4.setBackground(Color.YELLOW);
-			b4.setBounds(158, 266, 103, 23);
+			b4.setBounds(158, 266, 119, 23);
 			desktopPane.add(b4);
 			b4.addActionListener(new ActionListener(){ 
 				
 				@Override
 				public void actionPerformed(ActionEvent e) {
-					if(Catcher.ballsWhite>0)
+					r=new Random();
+					result = r.nextInt(high-low) + low;
+					
+					if(Catcher.ballsWhite>0 )
 					{
 						
 						Catcher.ballsWhite--;
+						if(result>70)
+						{
 						Catcher.pokemonsWhite++;
-					}			
+						}
+					}		
 					
 				}
 				
@@ -147,18 +175,24 @@ import javax.swing.GroupLayout.Alignment;
 			
 			JButton b5 = new JButton("SQUIRTLE");
 			b5.setBackground(Color.CYAN);
-			b5.setBounds(158, 342, 103, 23);
+			b5.setBounds(158, 342, 119, 23);
 			desktopPane.add(b5);
 			b5.addActionListener(new ActionListener(){ 
 				
 				@Override
 				public void actionPerformed(ActionEvent e) {
-					if(Catcher.ballsWhite>0)
+					r=new Random();
+					result = r.nextInt(high-low) + low;
+					
+					if(Catcher.ballsWhite>0 )
 					{
 						
 						Catcher.ballsWhite--;
+						if(result>70)
+						{
 						Catcher.pokemonsWhite++;
-					}			
+						}
+					}		
 					
 				}
 				
@@ -167,18 +201,24 @@ import javax.swing.GroupLayout.Alignment;
 			
 			JButton b6 = new JButton("CELEBI");
 			b6.setBackground(new Color(173, 255, 47));
-			b6.setBounds(158, 413, 103, 23);
+			b6.setBounds(158, 413, 119, 23);
 			desktopPane.add(b6);
 			b6.addActionListener(new ActionListener(){ 
 				
 				@Override
 				public void actionPerformed(ActionEvent e) {
-					if(Catcher.ballsWhite>0)
+					r=new Random();
+					result = r.nextInt(high-low) + low;
+					
+					if(Catcher.ballsWhite>0 )
 					{
 						
 						Catcher.ballsWhite--;
+						if(result>70)
+						{
 						Catcher.pokemonsWhite++;
-					}			
+						}
+					}		
 					
 				}
 				
@@ -187,18 +227,24 @@ import javax.swing.GroupLayout.Alignment;
 			
 			JButton b7 = new JButton("VULPIX");
 			b7.setBackground(new Color(255, 140, 0));
-			b7.setBounds(458, 45, 103, 23);
+			b7.setBounds(442, 45, 119, 23);
 			desktopPane.add(b7);
 			b7.addActionListener(new ActionListener(){ 
 				
 				@Override
 				public void actionPerformed(ActionEvent e) {
-					if(Catcher.ballsWhite>0)
+					r=new Random();
+					result = r.nextInt(high-low) + low;
+					
+					if(Catcher.ballsWhite>0 )
 					{
 						
 						Catcher.ballsWhite--;
+						if(result>70)
+						{
 						Catcher.pokemonsWhite++;
-					}			
+						}
+					}		
 					
 				}
 				
@@ -207,18 +253,24 @@ import javax.swing.GroupLayout.Alignment;
 			
 			JButton b8 = new JButton("GASTLY");
 			b8.setBackground(new Color(128, 0, 128));
-			b8.setBounds(458, 116, 103, 23);
+			b8.setBounds(442, 116, 119, 23);
 			desktopPane.add(b8);
 			b8.addActionListener(new ActionListener(){ 
 				
 				@Override
 				public void actionPerformed(ActionEvent e) {
-					if(Catcher.ballsWhite>0)
+					r=new Random();
+					result = r.nextInt(high-low) + low;
+					
+					if(Catcher.ballsWhite>0 )
 					{
 						
 						Catcher.ballsWhite--;
+						if(result>70)
+						{
 						Catcher.pokemonsWhite++;
-					}			
+						}
+					}		
 					
 				}
 				
@@ -227,18 +279,24 @@ import javax.swing.GroupLayout.Alignment;
 			
 			JButton b9 = new JButton("POLIWAG");
 			b9.setBackground(new Color(65, 105, 225));
-			b9.setBounds(458, 198, 103, 23);
+			b9.setBounds(442, 198, 119, 23);
 			desktopPane.add(b9);
 			b9.addActionListener(new ActionListener(){ 
 				
 				@Override
 				public void actionPerformed(ActionEvent e) {
-					if(Catcher.ballsWhite>0)
+					r=new Random();
+					result = r.nextInt(high-low) + low;
+					
+					if(Catcher.ballsWhite>0 )
 					{
 						
 						Catcher.ballsWhite--;
+						if(result>70)
+						{
 						Catcher.pokemonsWhite++;
-					}			
+						}
+					}		
 					
 				}
 				
@@ -247,18 +305,24 @@ import javax.swing.GroupLayout.Alignment;
 			
 			JButton b10 = new JButton("BULBASAUR");
 			b10.setBackground(Color.GREEN);
-			b10.setBounds(458, 266, 103, 23);
+			b10.setBounds(442, 266, 119, 23);
 			desktopPane.add(b10);
 			b10.addActionListener(new ActionListener(){ 
 				
 				@Override
 				public void actionPerformed(ActionEvent e) {
-					if(Catcher.ballsWhite>0)
+					r=new Random();
+					result = r.nextInt(high-low) + low;
+					
+					if(Catcher.ballsWhite>0 )
 					{
 						
 						Catcher.ballsWhite--;
+						if(result>70)
+						{
 						Catcher.pokemonsWhite++;
-					}			
+						}
+					}		
 					
 				}
 				
@@ -267,17 +331,23 @@ import javax.swing.GroupLayout.Alignment;
 			
 			JButton b11 = new JButton("TOGEPI");
 			b11.setBackground(new Color(255, 250, 205));
-			b11.setBounds(458, 342, 103, 23);
+			b11.setBounds(442, 342, 119, 23);
 			desktopPane.add(b11);
 			b11.addActionListener(new ActionListener(){ 
 				
 				@Override
 				public void actionPerformed(ActionEvent e) {
-					if(Catcher.ballsWhite>0)
+					r=new Random();
+					result = r.nextInt(high-low) + low;
+					
+					if(Catcher.ballsWhite>0 )
 					{
 						
 						Catcher.ballsWhite--;
+						if(result>70)
+						{
 						Catcher.pokemonsWhite++;
+						}
 					}			
 					
 				}
@@ -287,18 +357,24 @@ import javax.swing.GroupLayout.Alignment;
 			
 			JButton b12 = new JButton("PSYDUCK");
 			b12.setBackground(new Color(255, 255, 0));
-			b12.setBounds(458, 413, 103, 23);
+			b12.setBounds(442, 413, 119, 23);
 			desktopPane.add(b12);
 			b12.addActionListener(new ActionListener(){ 
 				
 				@Override
 				public void actionPerformed(ActionEvent e) {
-					if(Catcher.ballsWhite>0)
+					r=new Random();
+					result = r.nextInt(high-low) + low;
+					
+					if(Catcher.ballsWhite>0 )
 					{
 						
 						Catcher.ballsWhite--;
+						if(result>70)
+						{
 						Catcher.pokemonsWhite++;
-					}			
+						}
+					}		
 					
 				}
 				

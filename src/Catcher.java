@@ -92,7 +92,7 @@ public class Catcher extends GameObj{
 					
 					
 					
-					if(entity == Entities.Catcher2)											        //GOLD LIMITS
+					if(entity == Entities.Catcher2)											        
 					{	
 						if(colShopKeeperBlack==false)
 						{
@@ -122,7 +122,7 @@ public class Catcher extends GameObj{
 					
 					
 					
-					if(entity == Entities.Catcher2)											        //GOLD LIMITS
+					if(entity == Entities.Catcher2)											        
 					{	
 						if(dBlack==false)
 						{
